@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 
 app.get('/api/:ctname',function(req, res){
     var cityname = req.params.ctname;
-     client.get("http://api.openweathermap.org/data/2.5/weather?q="+cityname+"&appid=36a6850ef6ce49ab44862c6af9f483a8&mode=html", function (data, response) {
+     client.get("http://api.openweathermap.org/data/2.5/weather?q="+cityname+"&appid=YOURAPIKEY&mode=html", function (data, response) {
     // parsed response body as js object 
 	res.send(data);
 	});
