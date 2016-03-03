@@ -1,0 +1,15 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "description": "Consume Weather API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishal Mene",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node-rest-client": "*"
+  }
+}

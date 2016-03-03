@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	</head>
+<body>
+		City Name: <input id="ctname"type="text" name="cityname">  <br>
+		<input id="city" type="button" value="Get Weather">
+		<div id="weather" style="margin: 20px auto; width: 500px;"></div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#city").on('click', function (e) {
+    	if ($.trim($('#ctname').val()) != '') {
+    		callAjax($.trim($('#ctname').val()));
+    	} else {
+    		alert("Please enter city name.");
+    	}        
+    });
+ });
+function callAjax(ctname)
+{
+	$.get('/api/'+ctname, function( data ) {
+  	 $('#weather').html(data);
+	});
+}
+</script>
+</html>
